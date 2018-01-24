@@ -5,7 +5,7 @@ public class Divide {
 	protected int value;
 	
 	public Divide(int a) {
-		a = 0;
+		this.value = a;
 	}
 	
 	public void make(int b) {
