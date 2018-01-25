@@ -10,3 +10,8 @@ repositories {
 dependencies {
     compile 'junit:junit:4.12'
 }
+
+
+findbugs {
+	ignoreFailures = true
+}
