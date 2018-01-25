@@ -1,23 +1,35 @@
-apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'idea'
-apply plugin: 'findbugs'
-apply plugin: 'pmd'
-apply plugin: 'checkstyle'
+apply plugin : 'java'
+apply plugin : 'eclipse'
+apply plugin : 'idea'
+apply plugin : 'findbugs'
+apply plugin : 'pmd'
 
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    compile 'junit:junit:4.12'
-}
-
-checkstyle {
-	configFile = new File(rootDir, "config/checkstyle.xml")
-	ignoreFailures = true
-}
 
 findbugs {
 	ignoreFailures = true
+	findbugsTest.enabled = false
+ 	sourceSets = [sourceSets.main]
+ 	effort = "max"
+}
+ 	 
+pmd {
+ 	ignoreFailures = true
+ 	pmdTest.enabled = false
+ 	ruleSets = [
+	 	'java-basic',
+	 	'java-braces',
+	 	'java-clone',
+	 	'java-codesize',
+	 	'java-comments',
+	 	'java-controversial',
+	 	'java-coupling'
+ 	]
+}
+ 	 
+repositories {
+ 	mavenCentral()
+}
+ 	 
+dependencies {
+ 	compile 'junit:junit:4.12'
 }
