@@ -11,6 +11,10 @@ findbugs {
  	sourceSets = [sourceSets.main]
  	effort = "max"
 }
+
+checkstyle{
+	ignoreFailures = true
+}
  	 
 pmd {
  	ignoreFailures = true
