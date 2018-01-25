@@ -2,9 +2,8 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'findbugs'
-//apply plugin: 'pmd'
-//apply plugin: 'checkstyle'
-
+apply plugin: 'pmd'
+apply plugin: 'checkstyle'
 
 repositories {
     mavenCentral()
@@ -14,13 +13,11 @@ dependencies {
     compile 'junit:junit:4.12'
 }
 
-
-//checkstyle {
-//	configFile = new File(rootDir, "config/checkstyle.xml")
-//	ignoreFailures = true
-//}
+checkstyle {
+	configFile = new File(rootDir, "config/checkstyle.xml")
+	ignoreFailures = true
+}
 
 findbugs {
 	ignoreFailures = true
-	//sourceSets = [sourceSets.main]
 }
