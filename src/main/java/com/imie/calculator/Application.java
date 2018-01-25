@@ -35,11 +35,6 @@ public class Application {
 		System.out.println("Hello World !!");
 	}
 	
-	public static void test(int i) {
-		i = i + 1;
-	}
-	
-	
 	
 
 }
