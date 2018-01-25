@@ -21,10 +21,6 @@ dependencies {
 //}
 
 findbugs {
-	//ignoreFailures = true
+	ignoreFailures = true
 	//sourceSets = [sourceSets.main]
 }
-
-//pmd {
-	//ignoreFailures = true
-//}
