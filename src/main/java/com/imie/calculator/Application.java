@@ -15,6 +15,17 @@ public class Application {
 	public static void main(String[] args) {
 		Addition add = new Addition(1);
 		
+		/* 
+		//Exemple findbug
+		
+		String tt = "toto";
+		String ii = new Object();
+		
+		if(tt.equals(ii)) {
+			System.out.println("Same!!");
+		}
+		*/	
+		
 		add.make(2);
 		System.out.println(add.getValue());
 		
